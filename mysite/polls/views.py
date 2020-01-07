@@ -8,3 +8,8 @@ def index(request):
 
 def polls(request):
     return HttpResponse("<em>Hello world, you're at polls route.</em>")
+
+def help(request):
+    help_dict= {'help_insert': 'HELP PAGE'}
+    return render(request,'polls/help.html',context=help_dict)
+
